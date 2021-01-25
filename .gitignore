@@ -1,0 +1,8 @@
+target
+.devcontainer
+.project
+.settings
+.vscode
+.classpath
+.factorypath
+logs
