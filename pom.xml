@@ -18,6 +18,7 @@
 		<logback.version>1.2.3</logback.version>
 		<java.version>1.8</java.version>
 		<java.home>/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home</java.home>
+		<exec.maven.version>3.0.0</exec.maven.version>
 	</properties>
 
 	<build>
@@ -34,6 +35,29 @@
             		<show>public</show>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>${exec.maven.version}</version>
+				<executions>
+					<execution>
+						<phase>test</phase>
+						<goals>
+						<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration> 
+					<mainClass>cs329.DijkstraMain</mainClass>
+					<arguments>
+						<argument>--class-path=./target/test-classes</argument> 
+						<argument>--disable-banner</argument>
+						<argument>--scan-classpath</argument>  
+					</arguments>
+				</configuration>
+			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
