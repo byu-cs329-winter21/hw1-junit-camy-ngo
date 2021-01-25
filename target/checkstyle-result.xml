@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="/Users/student/Desktop/CS329/hw1-junit-camy-ngo/src/main/java/com/makotojava/learn/hellojunit5/solution/App.java">
+</file>
+<file name="/Users/student/Desktop/CS329/hw1-junit-camy-ngo/src/main/java/com/makotojava/learn/hellojunit5/App.java">
+<error line="21" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="24" severity="warning" message="Empty line should be followed by &lt;p&gt; tag on the next line." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocParagraphCheck"/>
+<error line="46" severity="warning" message="Line is longer than 100 characters (found 106)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+</checkstyle>
