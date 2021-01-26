@@ -1,4 +1,4 @@
-package cs329;
+package edu.byu.cs329;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

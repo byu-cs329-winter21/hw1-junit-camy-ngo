@@ -22,7 +22,29 @@
 	</properties>
 
 	<build>
-		<plugins>
+			<plugins>
+				<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>exec-maven-plugin</artifactId>
+			<version>${exec.maven.version}</version>
+			<executions>
+				<execution>
+					<phase>test</phase>
+					<goals>
+					<goal>java</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration> 
+				<mainClass>edu.byu.cs329.DijkstraMain</mainClass>
+				<arguments>
+					<argument>--class-path=./target/test-classes</argument> 
+					<argument>--disable-banner</argument>
+					<argument>--scan-classpath</argument>  
+				</arguments>
+			</configuration>
+		</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -33,28 +55,6 @@
 					<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
 					<source>8</source>
             		<show>public</show>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>${exec.maven.version}</version>
-				<executions>
-					<execution>
-						<phase>test</phase>
-						<goals>
-						<goal>java</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration> 
-					<mainClass>cs329.DijkstraMain</mainClass>
-					<arguments>
-						<argument>--class-path=./target/test-classes</argument> 
-						<argument>--disable-banner</argument>
-						<argument>--scan-classpath</argument>  
-					</arguments>
 				</configuration>
 			</plugin>
 			
